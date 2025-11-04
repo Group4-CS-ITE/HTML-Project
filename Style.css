@@ -1,0 +1,19 @@
+body{
+    background-image: url(https://i.redd.it/5ydp846lmjc91.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.heading{
+    padding: 30px;
+    color: red;
+}
+.navigation{
+    background-color:red;
+    width: 15%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+    color: black;
+    margin: 10px;
+    float: left;
+}
