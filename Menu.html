@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Kiosk</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- MAIN DISH MENU -->
+  <div class="menu" id="mainMenu">
+    <h2>Main Dishes</h2>
+    <div class="item" data-name="Lechon" data-price="350">Lechon<br>₱350</div>
+    <div class="item" data-name="Crispy Pata" data-price="250">Crispy Pata<br>₱250</div>
+    <div class="item" data-name="Chicken Inasal" data-price="120">Chicken Inasal<br>₱120</div>
+    <div class="item" data-name="Bistek" data-price="220">Bistek<br>₱220</div>
+    <div class="item" data-name="Sisig" data-price="200">Sisig<br>₱200</div>
+  </div>
+
+  <!-- ADD-ONS MENU (hidden initially) -->
+  <div class="menu hidden" id="addonsMenu">
+    <h2>Add-Ons</h2>
+    <div class="item" data-name="Lumpia" data-price="120">Lumpia<br>₱120</div>
+    <div class="item" data-name="Chicharon" data-price="100">Chicharon<br>₱100</div>
+    <div class="item" data-name="Okoy" data-price="150">Okoy<br>₱150</div>
+    <div class="item" data-name="Calamares" data-price="120">Calamares<br>₱120</div>
+    <div class="item" data-name="Rice" data-price="35">Rice<br>₱35</div>
+  </div>
+
+  <!-- DESSERT MENU (hidden initially) -->
+  <div class="menu hidden" id="dessertMenu">
+    <h2>Desserts</h2>
+    <div class="item" data-name="Halo-Halo" data-price="150">Halo-Halo<br>₱150</div>
+    <div class="item" data-name="Buko-Pie" data-price="100">Buko-Pie<br>₱100</div>
+    <div class="item" data-name="Salad" data-price="80">Salad<br>₱80</div>
+    <div class="item" data-name="Ice Cream" data-price="100">Ice Cream<br>₱100</div>
+    <div class="item" data-name="Brazo De Marcedes" data-price="130">Brazo De Marcedes<br>₱130</div>
+  </div>
+
+  <!-- DRINKS MENU (hidden initially) -->
+  <div class="menu hidden" id="drinksMenu">
+    <h2>Drinks</h2>
+    <div class="item" data-name="Coke" data-price="45">Coke<br>₱45</div>
+    <div class="item" data-name="Sprite " data-price="45">Sprite <br>₱45</div>
+    <div class="item" data-name="Ice Tea" data-price="60">Ice Tea<br>₱60</div>
+    <div class="item" data-name="Mango Milk Tea" data-price="80">Mango Milk Tea<br>₱80</div>
+    <div class="item" data-name="Calamansi Juice" data-price="30">Calamansi Juice<br>₱30</div>
+  </div>
+
+  <!-- CART -->
+  <div class="cart">
+    <h2>🛒 Your Order</h2>
+    <div class="cart-items" id="cartItems"></div>
+    <button class="checkout" id="checkoutBtn">Checkout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
