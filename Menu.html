@@ -4,152 +4,174 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Restaurant Kiosk</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="Style.css" />
 </head>
 <body>
-
-  <!-- FRONT PAGE -->
-  <div id="frontPage" class="front-page">
+<!-- Heading/Navigation -->
+<div>
+    <div>
+        <h1 class="heading">Sizzla</h1>
+    </div>
+</div>
+<br><br>
+<div class="container">
+    <div><img src="SizzlaLogo.png" alt="Sizzla Logo" class="Logo" width="90px" style="float: left;"></div>
+    <div class="navigation"> <center><a href="index.html">Home</a></center></div>
+    <div class="active"> <center><a href="Menu.html">Menu</a></center></div>
+    <div class="navigation"> <center><a href="AboutUs.html">About Us</a></center></div>
+</div>
+<div class="mainContainer">
+<!-- FRONT PAGE -->
+<div id="frontPage" class="front-page">
     <h1>Welcome to Sizzla!</h1>
     <p>Please select your order type:</p>
     <div class="choices">
-      <button id="dineInBtn">🍽️ Dine In</button>
-      <button id="takeOutBtn">🥡 Take Out</button>
+        <button id="dineInBtn">🍽️ Dine In</button>
+        <button id="takeOutBtn">🥡 Take Out</button>
     </div>
-  </div>
+</div>
 
-  <!-- NAVIGATION -->
-  <div class="nav hidden" id="navBar">
+<!-- NAVIGATION -->
+<div class="nav hidden" id="navBar">
     <button id="mainBtn">Main Dishes</button>
     <button id="addonsBtn">Add-Ons</button>
     <button id="dessertBtn">Desserts</button>
     <button id="drinksBtn">Drinks</button>
-  </div>
+</div>
 
-  <!-- MAIN DISH MENU -->
-  <div class="menu hidden" id="mainMenu">
-    <h2>Main Dishes</h2>
-    <div class="item" data-name="Lechon" data-price="350">
-      <img src="https://tse4.mm.bing.net/th/id/OIP.F-EOCTzcbO3eivH7wwfdjgHaER?pid=Api&P=0&h=180" width="50">
-      Lechon<br>₱350
-    </div>
-    <div class="item" data-name="Crispy Pata" data-price="250">
-      <img src="https://images.saymedia-content.com/.image/t_share/MTc0NDI5MDg3NjUyMTI4MTA0/filipino-crispy-pata-deep-fried-pigs-feet.jpg" width="50">
-      Crispy Pata<br>₱250
-    </div>
-    <div class="item" data-name="Chicken Inasal" data-price="120">
-      <img src="https://tse4.mm.bing.net/th/id/OIP.WeXYBu8UcNiM2fJKjW3bOgHaGL?pid=Api&P=0&h=180" width="50">
-      Chicken Inasal<br>₱120
-    </div>
-    <div class="item" data-name="Bistek" data-price="220">
-      <img src="https://tse4.mm.bing.net/th/id/OIP.EaubhFrGSdb9hS_taOq1zgHaHa?pid=Api&P=0&h=180" width="50">
-      Bistek<br>₱220
-    </div>
-    <div class="item" data-name="Sisig" data-price="200">
-      <img src="https://i.ytimg.com/vi/f1oM8NgimC0/maxresdefault.jpg" width="50">
-      Sisig<br>₱200
+<!-- MAIN DISH MENU -->
+<div class="menu hidden" id="mainMenu">
+    <div class="miniContainer">
+        <h2 class="Title">Main Dishes</h2>
+        <div class="item" data-name="Lechon" data-price="350">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.F-EOCTzcbO3eivH7wwfdjgHaER?pid=Api&P=0&h=180" width="50">
+            Lechon<br><br>₱350
+        </div>
+        <div class="item" data-name="Crispy Pata" data-price="250">
+            <img src="https://images.saymedia-content.com/.image/t_share/MTc0NDI5MDg3NjUyMTI4MTA0/filipino-crispy-pata-deep-fried-pigs-feet.jpg" width="50">
+            Crispy Pata<br><br>₱250
+        </div>
+        <div class="item" data-name="Chicken Inasal" data-price="120">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.WeXYBu8UcNiM2fJKjW3bOgHaGL?pid=Api&P=0&h=180" width="50">
+            Chicken Inasal<br><br>₱120
+        </div>
+        <div class="item" data-name="Bistek" data-price="220">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.EaubhFrGSdb9hS_taOq1zgHaHa?pid=Api&P=0&h=180" width="50">
+            Bistek<br><br>₱220
+        </div>
+            <div class="item" data-name="Sisig" data-price="200">
+            <img src="https://i.ytimg.com/vi/f1oM8NgimC0/maxresdefault.jpg" width="50">
+        Sisig<br><br>₱200
+        </div>
     </div>
     <div class="menu-controls">
-      <button class="backBtn">⬅ Back</button>
-      <button class="nextBtn">Next ➡</button>
+        <button class="backBtn">⬅ Back</button>
+        <button class="nextBtn">Next ➡</button>
     </div>
-  </div>
+</div>
 
-  <!-- ADD-ONS MENU -->
-  <div class="menu hidden" id="addonsMenu">
-    <h2>Add-Ons</h2>
-    <div class="item" data-name="Lumpia" data-price="120">
-      <img src="https://tse2.mm.bing.net/th/id/OIP.YuAkyrf8lfnHLtTdvYplNgHaHa?pid=Api&P=0&h=180" width="50">
-      Lumpia<br>₱120
-    </div>
-    <div class="item" data-name="Chicharon" data-price="100">
-      <img src="https://tse3.mm.bing.net/th/id/OIP.NnuYiYfarjZL6eVPmrMj2AHaEo?pid=Api&P=0&h=180" width="50">
-      Chicharon<br>₱100
-    </div>
-    <div class="item" data-name="Okoy" data-price="150">
-      <img src="https://tse4.mm.bing.net/th/id/OIP.UbNmTPJADYhFcU9_aT9lFgAAAA?pid=Api&P=0&h=180" width="50">
-      Okoy<br>₱150
-    </div>
-    <div class="item" data-name="Calamares" data-price="120">
-      <img src="https://tse2.mm.bing.net/th/id/OIP.s0FItKBRZnEj1IEN0rWx2QHaE8?pid=Api&P=0&h=180" width="50">
-      Calamares<br>₱120
-    </div>
-    <div class="item" data-name="Rice" data-price="35">
-      <img src="https://tse4.mm.bing.net/th/id/OIP.XRFFJhBk7MdT_HxqExyZbwHaE7?pid=Api&P=0&h=180" width="50">
-      Rice<br>₱35
+<!-- ADD-ONS MENU -->
+<div class="menu hidden" id="addonsMenu">
+    <div class="miniContainer">
+        <h2 class="Title">Add-Ons</h2>
+        <div class="item" data-name="Lumpia" data-price="120">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.YuAkyrf8lfnHLtTdvYplNgHaHa?pid=Api&P=0&h=180" width="50">
+            Lumpia<br><br>₱120
+        </div>
+        <div class="item" data-name="Chicharon" data-price="100">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.NnuYiYfarjZL6eVPmrMj2AHaEo?pid=Api&P=0&h=180" width="50">
+            Chicharon<br><br>₱100
+        </div>
+        <div class="item" data-name="Okoy" data-price="150">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.UbNmTPJADYhFcU9_aT9lFgAAAA?pid=Api&P=0&h=180" width="50">
+            Okoy<br><br>₱150
+        </div>
+        <div class="item" data-name="Calamares" data-price="120">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.s0FItKBRZnEj1IEN0rWx2QHaE8?pid=Api&P=0&h=180" width="50">
+            Calamares<br><br>₱120
+        </div>
+        <div class="item" data-name="Rice" data-price="35">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.XRFFJhBk7MdT_HxqExyZbwHaE7?pid=Api&P=0&h=180" width="50">
+            Rice<br><br>₱35
+        </div>
     </div>
     <div class="menu-controls">
-      <button class="backBtn">⬅ Back</button>
-      <button class="nextBtn">Next ➡</button>
+        <button class="backBtn">⬅ Back</button>
+        <button class="nextBtn">Next ➡</button>
     </div>
-  </div>
+</div>
 
-  <!-- DESSERT MENU -->
-  <div class="menu hidden" id="dessertMenu">
-    <h2>Desserts</h2>
-    <div class="item" data-name="Halo-Halo" data-price="150">
-      <img src="https://tse1.mm.bing.net/th/id/OIP.dLMHmcLaFojp2QycduUn9QHaHa?pid=Api&P=0&h=180" width="50">
-      Halo-Halo<br>₱150
+<!-- DESSERT MENU -->
+<div class="menu hidden" id="dessertMenu">
+    <div class="miniContainer">
+        <h2 class="Title">Desserts</h2>
+        <div class="item" data-name="Halo-Halo" data-price="150">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.dLMHmcLaFojp2QycduUn9QHaHa?pid=Api&P=0&h=180" width="50">
+            Halo-Halo<br><br>₱150
+        </div>
+        <div class="item" data-name="Buko-Pie" data-price="100">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.OnoeizWi81kWatzdL66J0AAAAA?pid=Api&P=0&h=180" width="50">
+            Buko-Pie<br><br>₱100
+        </div>
+        <div class="item" data-name="Salad" data-price="80">
+            <img src="https://3.bp.blogspot.com/-hMs4W5fNU90/XAQsaY67cBI/AAAAAAAARtE/BY5etW-QNdcEH2vyicGlOPMKfrnoRE4UQCLcBGAs/s1600/Buko%2BSalad%2B1.jpg" width="50">
+            Salad<br><br>₱80
+        </div>
+        <div class="item" data-name="Ice Cream" data-price="100">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.VTgtVfsHxD2tfxzIddPEfgHaE7?pid=Api&P=0&h=180" width="50">
+            Ice Cream<br><br>₱100
+        </div>
+        <div class="item" data-name="Brazo De Mercedes" data-price="130">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.BM_55cbJt43y8djtW6-L2gHaE8?pid=Api&P=0&h=180" width="50">
+            Brazo De Mercedes<br>₱130
+        </div>
+        <div class="menu-controls">
+            <button class="backBtn">⬅ Back</button>
+            <button class="nextBtn">Next ➡</button>
+        </div>
     </div>
-    <div class="item" data-name="Buko-Pie" data-price="100">
-      <img src="https://tse2.mm.bing.net/th/id/OIP.OnoeizWi81kWatzdL66J0AAAAA?pid=Api&P=0&h=180" width="50">
-      Buko-Pie<br>₱100
-    </div>
-    <div class="item" data-name="Salad" data-price="80">
-      <img src="https://3.bp.blogspot.com/-hMs4W5fNU90/XAQsaY67cBI/AAAAAAAARtE/BY5etW-QNdcEH2vyicGlOPMKfrnoRE4UQCLcBGAs/s1600/Buko%2BSalad%2B1.jpg" width="50">
-      Salad<br>₱80
-    </div>
-    <div class="item" data-name="Ice Cream" data-price="100">
-      <img src="https://tse1.mm.bing.net/th/id/OIP.VTgtVfsHxD2tfxzIddPEfgHaE7?pid=Api&P=0&h=180" width="50">
-      Ice Cream<br>₱100
-    </div>
-    <div class="item" data-name="Brazo De Mercedes" data-price="130">
-      <img src="https://tse3.mm.bing.net/th/id/OIP.BM_55cbJt43y8djtW6-L2gHaE8?pid=Api&P=0&h=180" width="50">
-      Brazo De Mercedes<br>₱130
+</div>
+
+<!-- DRINKS MENU -->
+<div class="menu hidden" id="drinksMenu">
+    <div class="miniContainer">
+        <h2 class="Title">Drinks</h2>
+        <div class="item" data-name="Coke" data-price="45">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.7LRCWeyE_vYbC5_QRIWkRAHaHa?pid=Api&P=0&h=180" width="50">
+            Coke<br><br>₱45
+        </div>
+        <div class="item" data-name="Sprite" data-price="45">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.pIFx6b0sZCNu4QORZ9RBBgHaHa?pid=Api&P=0&h=180" width="50">
+            Sprite<br><br>₱45
+        </div>
+        <div class="item" data-name="Ice Tea" data-price="60">
+            <img src="https://shwetainthekitchen.com/wp-content/uploads/2023/07/lemon-iced-tea.jpg" width="50">
+            Ice Tea<br><br>₱60
+        </div>
+        <div class="item" data-name="Mango Milk Tea" data-price="80">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.oKyEm4D2l3F70lPJrcZvhQHaLH?pid=Api&P=0&h=180" width="50">
+            Mango Milk Tea<br>₱80
+        </div>
+        <div class="item" data-name="Calamansi Juice" data-price="30">
+            <img src="https://tse1.mm.bing.net/th/id/OIP._K_0FugTOTGibVK60nqLmQHaHa?pid=Api&P=0&h=180" width="50">
+            Calamansi Juice<br>₱30
+        </div>
     </div>
     <div class="menu-controls">
-      <button class="backBtn">⬅ Back</button>
-      <button class="nextBtn">Next ➡</button>
+        <button class="backBtn">⬅ Back</button>
+        <button class="nextBtn">Next ➡</button>
     </div>
-  </div>
+</div>
 
-  <!-- DRINKS MENU -->
-  <div class="menu hidden" id="drinksMenu">
-    <h2>Drinks</h2>
-    <div class="item" data-name="Coke" data-price="45">
-      <img src="https://tse3.mm.bing.net/th/id/OIP.7LRCWeyE_vYbC5_QRIWkRAHaHa?pid=Api&P=0&h=180" width="50">
-      Coke<br>₱45
-    </div>
-    <div class="item" data-name="Sprite" data-price="45">
-      <img src="https://tse3.mm.bing.net/th/id/OIP.pIFx6b0sZCNu4QORZ9RBBgHaHa?pid=Api&P=0&h=180" width="50">
-      Sprite<br>₱45
-    </div>
-    <div class="item" data-name="Ice Tea" data-price="60">
-      <img src="https://shwetainthekitchen.com/wp-content/uploads/2023/07/lemon-iced-tea.jpg" width="50">
-      Ice Tea<br>₱60
-    </div>
-    <div class="item" data-name="Mango Milk Tea" data-price="80">
-      <img src="https://tse1.mm.bing.net/th/id/OIP.oKyEm4D2l3F70lPJrcZvhQHaLH?pid=Api&P=0&h=180" width="50">
-      Mango Milk Tea<br>₱80
-    </div>
-    <div class="item" data-name="Calamansi Juice" data-price="30">
-      <img src="https://tse1.mm.bing.net/th/id/OIP._K_0FugTOTGibVK60nqLmQHaHa?pid=Api&P=0&h=180" width="50">
-      Calamansi Juice<br>₱30
-    </div>
-    <div class="menu-controls">
-      <button class="backBtn">⬅ Back</button>
-      <button class="nextBtn">Next ➡</button>
-    </div>
-  </div>
-
-  <!-- CART -->
-  <div class="cart hidden" id="cartSection">
+<!-- CART -->
+<div class="cart hidden" id="cartSection">
     <h2>🛒 Your Order (<span id="orderType"></span>)</h2>
     <div class="cart-items" id="cartItems"></div>
-    <button class="checkout" id="checkoutBtn">Checkout</button>
-    <button class="cancel" id="cancelBtn">Cancel Order</button>
-  </div>
+        <button class="checkout" id="checkoutBtn">Checkout</button>
+        <button class="cancel" id="cancelBtn">Cancel Order</button>
+    </div>    
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
