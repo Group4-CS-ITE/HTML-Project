@@ -134,3 +134,12 @@ body{
 .checkout:hover {
     background: #45a049;
 }
+
+.About{
+    font-size: 25px; 
+    text-align: justify; 
+    color: black; 
+    line-height: 1.8; 
+    padding: 15px;
+    font-family:Playfair Display;
+}
