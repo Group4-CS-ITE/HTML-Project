@@ -56,6 +56,7 @@ body{
     color: black;
     background-color: red;
     box-shadow: 5px 5px 15px black;
+    text-shadow: 1px 1px 5px rgba(43, 39, 39, 0.815);
 }
 .navigation a:hover{
     background-color:rgb(255, 126, 66);
