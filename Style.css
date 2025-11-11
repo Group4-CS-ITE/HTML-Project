@@ -26,6 +26,7 @@ body{
     border-radius: 20px;
     position: relative;
     padding: 25px;
+    font-family:Playfair Display;
 }
 .container a{
     text-decoration: none;
