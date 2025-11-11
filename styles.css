@@ -1,60 +1,131 @@
 body {
   font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #fafafa;
+  background: #fafafa;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  text-align: center;
+}
+
+.front-page {
+  padding-top: 100px;
+}
+
+.front-page h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.choices button {
+  background: #333;
+  color: white;
+  padding: 15px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.nav {
+  background: #333;
+  padding: 10px;
+}
+
+.nav button {
+  background: #555;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 3px;
+  cursor: pointer;
 }
 
 .menu {
-  border: 1px solid #ccc;
-  background: #fff;
-  padding: 15px;
-  margin: 10px auto;
-  max-width: 400px;
+  margin: 20px;
+}
+
+.item {
+  display: inline-block;
+  width: 130px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
   border-radius: 8px;
+  cursor: pointer;
+  background: white;
+}
+
+.item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 8px;
+  border-radius: 6px;
 }
 
 .hidden {
   display: none;
 }
 
-.item {
-  cursor: pointer;
-  padding: 10px;
-  border: 1px solid #ddd;
-  margin: 6px 0;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-}
-
-.item:hover {
-  background-color: #e0e0e0;
-}
-
 .cart {
-  border-top: 2px solid #444;
-  margin-top: 20px;
-  padding-top: 10px;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
+  border-top: 2px solid #ddd;
+  padding: 15px;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-.checkout {
-  display: block;
-  width: 100%;
-  margin-top: 10px;
-  padding: 10px;
-  font-size: 16px;
-  background: #4CAF50;
+button.checkout, button.cancel {
+  background: #333;
   color: white;
+  padding: 8px 15px;
   border: none;
   border-radius: 5px;
+  margin: 5px;
   cursor: pointer;
 }
 
-.checkout:hover {
-  background: #45a049;
+.backBtn {
+  display: block;
+  margin: 15px auto;
+  background: #666;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
 }
+
+.menu-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.menu-controls button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.menu-controls button:hover {
+  background-color: #555;
+}
+
+.backBtn {
+  background-color: #444;
+}
+
+.nextBtn {
+  background-color: #444;
+}
+
