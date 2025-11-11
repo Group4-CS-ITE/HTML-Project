@@ -1,61 +1,108 @@
-const mainMenu = document.getElementById("mainMenu");
-const addonsMenu = document.getElementById("addonsMenu");
-const dessertMenu = document.getElementById("dessertMenu");
-const drinksMenu = document.getElementById("drinksMenu");
-const cartItems = document.getElementById("cartItems");
-const checkoutBtn = document.getElementById("checkoutBtn");
+window.onload = function() {
+  const menus = ['mainMenu', 'addonsMenu', 'dessertMenu', 'drinksMenu'];
+  let currentIndex = 0;
+  let cart = [];
+  let orderType = "";
 
-// --- Step 1: Main dish clicked ---
-mainMenu.addEventListener("click", (e) => {
-  if (e.target.classList.contains("item")) {
-    addToCart(e.target);
-    mainMenu.classList.add("hidden");
-    addonsMenu.classList.remove("hidden");
+  const cartItems = document.getElementById('cartItems');
+  const dineInBtn = document.getElementById('dineInBtn');
+  const takeOutBtn = document.getElementById('takeOutBtn');
+  const orderTypeText = document.getElementById('orderType');
+
+  // FRONT PAGE BUTTONS
+  dineInBtn.addEventListener('click', () => startOrder("Dine In"));
+  takeOutBtn.addEventListener('click', () => startOrder("Take Out"));
+
+  function startOrder(type) {
+    orderType = type;
+    orderTypeText.textContent = type;
+    document.getElementById('frontPage').classList.add('hidden');
+    document.getElementById('navBar').classList.remove('hidden');
+    document.getElementById('cartSection').classList.remove('hidden');
+    showMenu(currentIndex);
   }
-});
 
-// --- Step 2: Add-on clicked ---
-addonsMenu.addEventListener("click", (e) => {
-  if (e.target.classList.contains("item")) {
-    addToCart(e.target);
-    addonsMenu.classList.add("hidden");
-    dessertMenu.classList.remove("hidden");
+  // NAVIGATION BUTTONS
+  document.getElementById('mainBtn').onclick = () => goToMenu(0);
+  document.getElementById('addonsBtn').onclick = () => goToMenu(1);
+  document.getElementById('dessertBtn').onclick = () => goToMenu(2);
+  document.getElementById('drinksBtn').onclick = () => goToMenu(3);
+
+  function goToMenu(index) {
+    currentIndex = index;
+    showMenu(currentIndex);
   }
-});
 
-// --- Step 3: Dessert clicked ---
-dessertMenu.addEventListener("click", (e) => {
-  if (e.target.classList.contains("item")) {
-    addToCart(e.target);
-    dessertMenu.classList.add("hidden");
-    drinksMenu.classList.remove("hidden");
+  function showMenu(index) {
+    menus.forEach((id, i) => {
+      document.getElementById(id).classList.toggle('hidden', i !== index);
+    });
   }
-});
 
-// --- Step 4: Drink clicked ---
-drinksMenu.addEventListener("click", (e) => {
-  if (e.target.classList.contains("item")) {
-    addToCart(e.target);
-    drinksMenu.classList.add("hidden");
-    alert("✅ Order complete! Review your cart below.");
+  // ADD ITEM TO CART
+  document.querySelectorAll('.item').forEach(item => {
+    item.addEventListener('click', () => {
+      const name = item.dataset.name;
+      const price = parseFloat(item.dataset.price);
+      cart.push({ name, price });
+      renderCart();
+    });
+  });
+
+  function renderCart() {
+    cartItems.innerHTML = '';
+    cart.forEach(item => {
+      const div = document.createElement('div');
+      div.textContent = `${item.name} - ₱${item.price}`;
+      cartItems.appendChild(div);
+    });
   }
-});
 
-// --- Add item to cart ---
-function addToCart(item) {
-  const name = item.dataset.name.trim();
-  const price = parseFloat(item.dataset.price).toFixed(2);
-  const div = document.createElement("div");
-  div.textContent = `${name} - $${price}`;
-  cartItems.appendChild(div);
-}
+  // CHECKOUT
+  document.getElementById('checkoutBtn').addEventListener('click', () => {
+    if (cart.length === 0) {
+      alert("No items in cart!");
+      return;
+    }
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    alert(`✅ Checkout complete!\nOrder Type: ${orderType}\nTotal: ₱${total}`);
+    cart = [];
+    renderCart();
+  });
 
-// Optional: Restart order when checkout is clicked
-checkoutBtn.addEventListener("click", () => {
-  alert("Thank you! Starting a new order...");
-  cartItems.innerHTML = "";
-  drinksMenu.classList.add("hidden");
-  dessertMenu.classList.add("hidden");
-  addonsMenu.classList.add("hidden");
-  mainMenu.classList.remove("hidden");
-});
+  // CANCEL ORDER
+  document.getElementById('cancelBtn').addEventListener('click', () => {
+    if (cart.length === 0) {
+      alert("No active order to cancel.");
+    } else {
+      if (confirm("Are you sure you want to cancel your order?")) {
+        cart = [];
+        renderCart();
+        alert("❌ Order cancelled.");
+      }
+    }
+  });
+
+  // BACK AND NEXT BUTTONS
+  document.querySelectorAll('.backBtn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        showMenu(currentIndex);
+      } else {
+        alert("You're at the first menu.");
+      }
+    });
+  });
+
+  document.querySelectorAll('.nextBtn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (currentIndex < menus.length - 1) {
+        currentIndex++;
+        showMenu(currentIndex);
+      } else {
+        alert("You’ve reached the last menu.");
+      }
+    });
+  });
+};
