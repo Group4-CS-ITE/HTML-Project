@@ -1,0 +1,91 @@
+body{
+    background-image: url(https://preview.redd.it/fidyq5valih61.jpg?width=1080&crop=smart&auto=webp&s=14baea7155d1e87765dacc2a15fa4e55d6d24bae);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    font-family: Playfai Display;
+    background-color: #fafafa;
+    margin: 0;
+}
+.navContainer{
+    border: 2px solid black;
+    background-color: #FF741F;
+    width: 100%;
+    overflow:hidden;
+    border-radius: 1px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}   
+
+.Logo{
+    margin:.5% 15px;
+    border: 3px solid black;
+    box-shadow: 3px 3px 7px black;
+    border-radius:100%;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+}
+.heading{
+    padding: 5px;
+    color: red;
+    font-size: 20px;
+    font-family:Playfair Display;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 5px 5px 10px black;
+    display: flex;
+    gap: 10px;
+}
+.navigation{
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.navigation a{
+    margin: 1% 5px;
+    width: 10%;
+    text-decoration: none;
+    color: inherit;
+    align-items: center;
+    display: inline;
+}
+.navigation a:hover{
+    background-color:rgb(255, 126, 66);
+    color: rgb(0, 0, 0);
+}
+.navButton,.active{
+    padding: 10px;
+    border-radius: 1px;
+}
+.active{
+    background-color: rgb(255, 126, 66);
+    color: rgb(0, 0, 0);
+    box-shadow: inset 5px 5px 10px black;
+}
+.navButton{
+    color: black;
+    background-color: red;
+    box-shadow: 5px 5px 15px black;
+}
+.space{
+    width: 15%;
+}
+
+.mainContainer,.miniContainer{
+    border-radius: 5px;
+    padding: 15px;
+    border: 3px solid black;
+}
+.mainContainer{
+    background-color: rgba(255, 210, 206, 0.897);
+    height: 100%;
+}
+.miniContainer{
+    background-color: #ff4529;
+}
