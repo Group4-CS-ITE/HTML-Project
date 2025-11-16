@@ -3,27 +3,42 @@
 <head>
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Layout.css">
     <link rel="stylesheet" href="Style.css">
     <link rel="icon" href="SizzlaLogo.png">
 </head>
 <body>
-<div>
-    <h1 class="heading">Sizzla</h1>
-</div>
-<br><br>
-<div class="container">
-    <div><img src="SizzlaLogo.png" alt="Sizzla Logo" class="Logo" width="90px" style="float: left;"></div>
-    <div class="active"> <center><a href="index.html">Home</a></center></div>
-    <div class="navigation"> <center><a href="Menu.html">Menu</a></center></div>
-    <div class="navigation"> <center><a href="AboutUs.html">About Us</a></center></div>
+<!-- Heading/Navigation -->
+<div class="navContainer">
+    <div class="heading">
+        <img src="SizzlaLogo.png" alt="Sizzla Logo" class="Logo">
+        <h1>Sizzla</h1>
+    </div>
+    <div class="navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="Menu.html" class="navButton">Menu</a>
+        <a href="AboutUs.html" class="navButton">About Us</a>
+    </div>
+    <div class="space"></div>
 </div>
 
+<!-- Main -->
 <div class="mainContainer">
-    <h1 class="Title">Our Location</h1>
+    <h1 class="Title">Get Your Location</h1>
     <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1047.8375321772266!2d121.06116061560019!3d14.626335170532327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b796aecb8763%3A0xaa026ea7350f82e7!2sTechnological%20Institute%20of%20the%20Philippines%20-%20Quezon%20City!5e0!3m2!1sen!2sph!4v1762883580364!5m2!1sen!2sph" 
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <button onclick="getLocation()">Show My Location on Map</button>
+        <p id="status"></p>
+        
+        <iframe id="map" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1047.8375321772266!2d121.06116061560019!3d14.626335170532327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b796aecb8763%3A0xaa026ea7350f82e7!2sTechnological%20Institute%20of%20the%20Philippines%20-%20Quezon%20City!5e0!3m2!1sen!2sph!4v1762883580364!5m2!1sen!2sph"
+                allowfullscreen loading="lazy">
+        </iframe>
+    </div>
+    <br><br>
+    <div class="Submit">
+        <a href="Menu.html">Proceed</a>
     </div>
 </div>
+<script src="MapScript.js"></script>
 </body>
 </html>
