@@ -25,7 +25,7 @@ function getLocation() {
         fetch(url, { headers: { "User-Agent": "SizzlaWebApp/1.0" } })
             .then(res => res.json())
             .then(data => {
-                status.textContent = "📍 " + (data.display_name || "Location found");
+                status.textContent = " " + (data.display_name || "Location found");
             })
             .catch(() => {
                 status.textContent = `Latitude: ${lat}, Longitude: ${lng}`;
