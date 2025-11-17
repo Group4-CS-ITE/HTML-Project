@@ -1,86 +1,59 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meet the Developers</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #ff8c4c;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #ed3116;
-      color: white;
-      text-align: center;
-      padding: 1rem 0;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 2rem;
-    }
-    .developer {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 20px;
-      width: 250px;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-    .developer:hover {
-      transform: translateY(-5px);
-    }
-    .developer img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #1e293b;
-      color: white;
-      font-size: 0.9rem;
-    }
-  </style>
+  <link rel="stylesheet" href="Layout.css">
+  <link rel="stylesheet" href="info.css">
 </head>
 <body>
-
-  <header>
-    <h1 style="color: white;">Meet The Developers</h1>
-    <p style="color: white;">Behind this website</p>
-  </header>
-
-  <div class="container">
-    <div class="developer">
-      <img src="https://drive.google.com/thumbnail?id=1vGiZZcU6VK58rhgX5I4wfGQ8-_XaRZod" alt="Developer 1">
-      <h2>Joshua James Villacorta</h2>
+<!-- Heading/Navigation -->
+<div class="navContainer">
+    <div class="heading">
+        <img src="SizzlaLogo.png" alt="Sizzla Logo" class="Logo">
+        <h1>Sizzla</h1>
     </div>
-
-    <div class="developer">
-      <img src="https://drive.google.com/thumbnail?id=1K-06HHPB5qSo0qyEbHYZp-YXfDtQkOyb" alt="Developer 2">
-      <h2>Vincent Escarnuella</h2>
+    <div class="navigation">
+        <a href="index.html" class="navButton">Home</a>
+        <a href="Menu.html" class="navButton">Menu</a>
+        <a href="AboutUs.html" class="navButton">About Us</a>
+        <a href="contacts.html" class="navButton">Contacts</a>
+        <a href="developers.html" class="active">Developers</a>
     </div>
-    
-    <div class="developer">
-      <img src="https://drive.google.com/thumbnail?id=12zR3XH4SfN6XJm-QE1n4DKATCREoIz5M" alt="Developer 3">
-      <h2>Eric James Reponcion</h2>
-    </div>
+    <div class="space"></div>
+</div>
 
-    <div class="developer">
-      <img src="https://drive.google.com/thumbnail?id=1y_BZRJGWw73LsDJVNlfmHyfrOgNwy4Wq" alt="Developer 4">
-      <h2>Miguel Cabigao</h2>
-    </div>
-  </div>
+<!-- Main -->
+<div class="mainContainer">
+    <header>
+        <h1>Meet The Developers</h1>
+        <p>Behind this website</p>
+    </header>
 
+    <div class="container">
+        <div class="developer">
+        <img src="https://drive.google.com/thumbnail?id=1vGiZZcU6VK58rhgX5I4wfGQ8-_XaRZod" alt="Developer 1">
+        <h2>Joshua James Villacorta</h2>
+        </div>
+
+        <div class="developer">
+        <img src="https://drive.google.com/thumbnail?id=1K-06HHPB5qSo0qyEbHYZp-YXfDtQkOyb" alt="Developer 2">
+        <h2>Vincent Escarnuella</h2>
+        </div>
+        
+        <div class="developer">
+        <img src="https://drive.google.com/thumbnail?id=12zR3XH4SfN6XJm-QE1n4DKATCREoIz5M" alt="Developer 3">
+        <h2>Eric James Reponcion</h2>
+        </div>
+
+        <div class="developer">
+        <img src="https://drive.google.com/thumbnail?id=1y_BZRJGWw73LsDJVNlfmHyfrOgNwy4Wq" alt="Developer 4">
+        <h2>Miguel Cabigao</h2>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
