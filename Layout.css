@@ -9,7 +9,7 @@ body{
 }
 .navContainer{
     border: 2px solid black;
-    background-color: #FF741F;
+    background-color: #ff8a42;
     width: 100%;
     overflow:hidden;
     border-radius: 1px;
@@ -67,10 +67,11 @@ body{
     background-color: rgb(255, 126, 66);
     color: rgb(0, 0, 0);
     box-shadow: inset 5px 5px 10px black;
+    gap: 10px;
 }
 .navButton{
     color: black;
-    background-color: red;
+    background-color: rgb(252, 40, 40);
     box-shadow: 5px 5px 15px black;
 }
 .space{
