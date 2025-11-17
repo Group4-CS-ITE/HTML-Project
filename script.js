@@ -49,11 +49,26 @@ window.onload = function() {
     });
   });
 
+  // RENDER CART WITH REMOVE BUTTONS
   function renderCart() {
     cartItems.innerHTML = '';
-    cart.forEach(item => {
+    cart.forEach((item, index) => {
       const div = document.createElement('div');
-      div.textContent = `${item.name} - ₱${item.price}`;
+      div.classList.add('cart-row');
+
+      const textSpan = document.createElement('span');
+      textSpan.textContent = `${item.name} - ₱${item.price}`;
+
+      const removeBtn = document.createElement('button');
+      removeBtn.textContent = 'Remove';
+      removeBtn.classList.add('remove-btn');
+      removeBtn.onclick = () => {
+        cart.splice(index, 1);
+        renderCart();
+      };
+
+      div.appendChild(textSpan);
+      div.appendChild(removeBtn);
       cartItems.appendChild(div);
     });
   }
