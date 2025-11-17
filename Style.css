@@ -104,12 +104,12 @@
 
 .menu {
     margin: 20px;
-    background-color: #d34a35;
+    background-color: #ff78a0;
     padding: 25px;
     border: 2px solid #000000;
     border-radius: 25px;
     text-align: center;
-    }
+}
 
 .item {
     display: inline-block;
