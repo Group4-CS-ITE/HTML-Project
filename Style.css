@@ -171,6 +171,9 @@ button.checkout, button.cancel {
     border-radius: 5px;
     cursor: pointer;
 }
+.backBtn, .nextBtn {
+    background-color: #444;
+}
 
 .menu-controls {
     display: flex;
@@ -186,7 +189,7 @@ button.checkout, button.cancel {
     border: 1px solid black;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #ff7300;
+    background-color: #ff953f;
     color: black;
     transition: 0.2s;
     box-shadow: 5px 5px 15px black;
@@ -194,14 +197,6 @@ button.checkout, button.cancel {
 
 .menu-controls button:hover {
     background-color: #555;
-}
-
-.backBtn {
-    background-color: #444;
-}
-
-.nextBtn {
-    background-color: #444;
 }
 .cart-items .cart-row {
   display: flex;
