@@ -71,7 +71,7 @@
 }
 
 .choices button {
-    background: #DD3D24;
+    background: #ff563c;
     color: rgb(0, 0, 0);
     padding: 15px 30px;
     margin: 10px;
@@ -83,16 +83,17 @@
 }
 
 .nav {
-    background: #ff7300;
+    background: #ffa963;
     padding: 10px;
     border-radius: 20px;
     border: 1px solid black;
     box-shadow: 5px 5px 10px black;
+    text-align: center;
 }
 
 .nav button {
-    background: #DD3D24;
-    color: white;
+    background: #ff5b42;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 10px;
     padding: 10px 15px;
@@ -147,7 +148,7 @@
     bottom: 0;
     margin: auto;
     width: 50%;
-    text-align:center;
+    text-align: center;
 }
 
 button.checkout, button.cancel {
