@@ -61,7 +61,7 @@ body{
 }
 .navButton,.active{
     padding: 10px;
-    border-radius: 1px;
+    border-radius: 20px;
 }
 .active{
     background-color: rgb(255, 126, 66);
