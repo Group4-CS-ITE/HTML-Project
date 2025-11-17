@@ -147,6 +147,7 @@
     bottom: 0;
     margin: auto;
     width: 50%;
+    text-align:center;
 }
 
 button.checkout, button.cancel {
