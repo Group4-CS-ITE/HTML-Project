@@ -203,6 +203,26 @@ button.checkout, button.cancel {
 .nextBtn {
     background-color: #444;
 }
+.cart-items .cart-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 0;
+}
+
+.cart-items .remove-btn {
+  padding: 3px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #c0392b;
+  color: #fff;
+  font-size: 12px;
+}
+
+.cart-items .remove-btn:hover {
+  background: #e74c3c;
+}
 
 .About{
     font-size: 25px; 
